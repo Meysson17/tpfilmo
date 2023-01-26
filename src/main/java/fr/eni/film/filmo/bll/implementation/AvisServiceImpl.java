@@ -1,6 +1,7 @@
 package fr.eni.film.filmo.bll.implementation;
 
 import fr.eni.film.filmo.bll.AvisService;
+import fr.eni.film.filmo.bll.Erreur.ErreurAvis;
 import fr.eni.film.filmo.bo.AvisBo;
 
 import java.util.ArrayList;
@@ -32,4 +33,10 @@ public class AvisServiceImpl implements AvisService {
         listeAvis.forEach(m -> mapAvis.put(Math.toIntExact(m.getId()), m));
 
     }
+
+	@Override
+	public AvisBo avis(int avis) throws ErreurAvis {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
