@@ -2,16 +2,23 @@ package fr.eni.film.filmo.bo;
 
 public class ParticipantBo {
 
-    private Long id;
+    private int id;
 
     private String nom;
     private String prenom;
 
-    public Long getId() {
+    public ParticipantBo(int id, String nom, String prenom) {
+        super();
+        this.id =id;
+        this.nom = nom;
+        this.prenom = prenom;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

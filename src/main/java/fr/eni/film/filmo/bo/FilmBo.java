@@ -119,6 +119,7 @@ public class FilmBo {
         this.acteurs = acteurs;
     }
 
+
     public List<AvisBo> getAvis() {
         return avis;
     }
@@ -134,4 +135,6 @@ public class FilmBo {
     public void setRealisateur(ParticipantBo realisateur) {
         this.realisateur = realisateur;
     }
+
+
 }

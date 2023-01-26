@@ -26,4 +26,5 @@ public interface FilmService {
 
     void ajouterFilm(FilmBo film);
 
+    List<ParticipantBo> getParticipants();
 }
