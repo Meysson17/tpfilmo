@@ -28,8 +28,8 @@ public class FilmServiceImpl implements FilmService{
     public FilmServiceImpl() {
         listeFilms = new ArrayList<>();
         listeFilms.add( new FilmBo(1, "Hary Potter", 2001, 120, "Je suis la"));
-        listeFilms.add( new FilmBo(2, "Bucheron.ne"));
-        listeFilms.add(new FilmBo(3, "Vigneron.ne"));
+        listeFilms.add( new FilmBo(2, "Bucheron.ne", 1990, 240, "Foret"));
+        listeFilms.add(new FilmBo(3, "Avatar 2", 2022, 180, "Voie de l'eau"));
 
         mapFilms = new HashMap<Integer, FilmBo>();
         listeFilms.forEach(m -> mapFilms.put(Math.toIntExact(m.getId()), m));
