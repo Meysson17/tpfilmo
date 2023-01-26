@@ -2,7 +2,7 @@ package fr.eni.film.filmo.bo;
 
 public class MembreBo {
 
-    private Long id;
+    private int id;
 
     private String nom;
     private String prenom;
@@ -11,11 +11,21 @@ public class MembreBo {
 
     private Boolean isAdmin;
 
-    public Long getId() {
+    public MembreBo(int id, String nom, String prenom, String login, String motDePasse, Boolean isAdmin) {
+        super();
+        this.id =id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.login = login;
+        this.motDePasse = motDePasse;
+        this.isAdmin = isAdmin;
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -1,6 +1,6 @@
 package fr.eni.film.filmo.bll.implementation;
 
-import fr.eni.film.filmo.bll.ErreurFilm;
+import fr.eni.film.filmo.bll.Erreur.ErreurFilm;
 import fr.eni.film.filmo.bll.FilmService;
 import fr.eni.film.filmo.bo.FilmBo;
 
