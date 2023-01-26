@@ -8,6 +8,12 @@ public class FilmBo {
     private int duree;
     private String synopsis;
 
+    public FilmBo(int id, String title, int annee, int duree, String synopsis) {
+
+    }
+
+
+
 
     public Long getId() {
         return id;
