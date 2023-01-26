@@ -1,7 +1,7 @@
 package fr.eni.film.filmo.controller;
 
-import fr.eni.film.filmo.bll.ErreurFilm;
-import fr.eni.film.filmo.bll.ErreurMembre;
+import fr.eni.film.filmo.bll.Erreur.ErreurFilm;
+import fr.eni.film.filmo.bll.Erreur.ErreurMembre;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;

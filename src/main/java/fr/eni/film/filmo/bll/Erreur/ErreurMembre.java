@@ -1,4 +1,4 @@
-package fr.eni.film.filmo.bll;
+package fr.eni.film.filmo.bll.Erreur;
 
 public class ErreurMembre extends Exception{
     public ErreurMembre(){

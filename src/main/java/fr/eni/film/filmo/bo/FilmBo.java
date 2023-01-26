@@ -8,6 +8,8 @@ public class FilmBo {
     private int duree;
     private String synopsis;
 
+    private AvisBo avis;
+
     public FilmBo(int id, String title, int annee, int duree, String synopsis) {
         super();
         this.id =id;
@@ -17,7 +19,7 @@ public class FilmBo {
         this.synopsis=synopsis;
     }
 
-    
+
     public int getId() {
         return id;
     }
@@ -68,5 +70,11 @@ public class FilmBo {
                 '}';
     }
 
+    public AvisBo getAvis() {
+        return avis;
+    }
 
+    public void setAvis(AvisBo avis) {
+        this.avis = avis;
+    }
 }

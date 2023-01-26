@@ -7,16 +7,6 @@ public class AvisBo {
 
     private String commentaire;
 
-    private FilmBo film;
-
-    public FilmBo getFilm() {
-        return film;
-    }
-
-    public void setFilm(FilmBo film) {
-        this.film = film;
-    }
-
     public AvisBo(int id, int note, String commentaire) {
         super();
         this.id = id;
