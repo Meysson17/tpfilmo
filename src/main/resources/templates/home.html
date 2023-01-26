@@ -11,7 +11,7 @@
 
 
     <select class="form-select col-3"  th:field="*{film}" required>
-        <option th:each="Film: ${@film}"
+        <option th:each="film: ${@film}"
                 th:value="${film.id}" th:text="${film.titre}"></option>
     </select>
 

@@ -2,16 +2,34 @@ package fr.eni.film.filmo.bo;
 
 public class AvisBo {
 
-    private Long id;
+    private int id;
     private int note;
 
     private String commentaire;
 
-    public Long getId() {
+    private FilmBo film;
+
+    public FilmBo getFilm() {
+        return film;
+    }
+
+    public void setFilm(FilmBo film) {
+        this.film = film;
+    }
+
+    public AvisBo(int id, int note, String commentaire) {
+        super();
+        this.id = id;
+        this.note=note;
+        this.commentaire=commentaire;
+
+    }
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

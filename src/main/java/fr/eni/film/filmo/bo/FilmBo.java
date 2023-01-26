@@ -2,24 +2,27 @@ package fr.eni.film.filmo.bo;
 
 public class FilmBo {
 
-    private Long id;
+    private int id;
     private String title;
     private int annee;
     private int duree;
     private String synopsis;
 
     public FilmBo(int id, String title, int annee, int duree, String synopsis) {
-
+        super();
+        this.id =id;
+        this.title = title;
+        this.annee=annee;
+        this.duree = duree;
+        this.synopsis=synopsis;
     }
 
-
-
-
-    public Long getId() {
+    
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

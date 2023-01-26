@@ -1,5 +1,7 @@
-package fr.eni.film.filmo.bll;
+package fr.eni.film.filmo.bll.implementation;
 
+import fr.eni.film.filmo.bll.ErreurFilm;
+import fr.eni.film.filmo.bll.FilmService;
 import fr.eni.film.filmo.bo.FilmBo;
 
 import java.util.ArrayList;
@@ -7,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class FilmServiceImpl implements FilmService{
+public class FilmServiceImpl implements FilmService {
     private List<FilmBo> listeFilms;
     public FilmBo film(int choix) throws ErreurFilm {
         return null;
