@@ -1,5 +1,6 @@
 package fr.eni.film.filmo.bo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class FilmBo {
@@ -10,11 +11,11 @@ public class FilmBo {
     private int duree;
     private String synopsis;
 
-    private AvisBo avis;
+    private List<AvisBo> avis;
 
     private GenreBo genre;
 
-    private ParticipantBo participant;
+    private ParticipantBo realisateur;
 
     private List<ParticipantBo> acteurs;
 
@@ -28,6 +29,19 @@ public class FilmBo {
         this.synopsis=synopsis;
     }
 
+    public FilmBo(Integer id, String title, int annee, ParticipantBo realisateur,
+                int duree, GenreBo genre, String synopsis) {
+        super();
+        this.id = id;
+        this.title = title;
+        this.annee = annee;
+        this.realisateur = realisateur;
+        this.duree = duree;
+        this.genre = genre;
+        this.acteurs = new ArrayList<ParticipantBo>();
+        this.avis = new ArrayList<AvisBo>();
+        this.synopsis = synopsis;
+    }
 
     public int getId() {
         return id;
@@ -79,13 +93,7 @@ public class FilmBo {
                 '}';
     }
 
-    public AvisBo getAvis() {
-        return avis;
-    }
 
-    public void setAvis(AvisBo avis) {
-        this.avis = avis;
-    }
 
     public GenreBo getGenre() {
         return genre;
@@ -96,11 +104,11 @@ public class FilmBo {
     }
 
     public ParticipantBo getParticipant() {
-        return participant;
+        return realisateur;
     }
 
     public void setParticipant(ParticipantBo participant) {
-        this.participant = participant;
+        this.realisateur = participant;
     }
 
     public List<ParticipantBo> getActeurs() {
@@ -109,5 +117,21 @@ public class FilmBo {
 
     public void setActeurs(List<ParticipantBo> acteurs) {
         this.acteurs = acteurs;
+    }
+
+    public List<AvisBo> getAvis() {
+        return avis;
+    }
+
+    public void setAvis(List<AvisBo> avis) {
+        this.avis = avis;
+    }
+
+    public ParticipantBo getRealisateur() {
+        return realisateur;
+    }
+
+    public void setRealisateur(ParticipantBo realisateur) {
+        this.realisateur = realisateur;
     }
 }

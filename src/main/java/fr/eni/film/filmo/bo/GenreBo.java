@@ -2,15 +2,22 @@ package fr.eni.film.filmo.bo;
 
 public class GenreBo {
 
-    private Long id;
+    private Integer id;
 
     private String libelle;
 
-    public Long getId() {
+
+    public GenreBo(int id, String libelle){
+        super();
+        this.id = id;
+        this.libelle = libelle;
+    }
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
