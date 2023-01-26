@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Page d'accueil</title>
+
 </head>
 <body>
+<h1>Page d'accueil</h1>
+
+
+
+    <select class="form-select col-3"  th:field="*{film}" required>
+        <option th:each="Film: ${@film}"
+                th:value="${film.id}" th:text="${film.titre}"></option>
+    </select>
+
+
 
 </body>
 </html>

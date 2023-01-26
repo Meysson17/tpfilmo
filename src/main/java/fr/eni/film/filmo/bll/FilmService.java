@@ -7,8 +7,6 @@ import java.util.Map;
 
 public interface FilmService {
 
-    public FilmBo film(int choix) throws ErreurFilm;
-
     public List<FilmBo> getListeFilms();
     public Map<Integer, FilmBo> getMapFilms();
 
