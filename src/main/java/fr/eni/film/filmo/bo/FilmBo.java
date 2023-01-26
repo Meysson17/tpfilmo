@@ -1,5 +1,7 @@
 package fr.eni.film.filmo.bo;
 
+import java.util.List;
+
 public class FilmBo {
 
     private int id;
@@ -9,6 +11,13 @@ public class FilmBo {
     private String synopsis;
 
     private AvisBo avis;
+
+    private GenreBo genre;
+
+    private ParticipantBo participant;
+
+    private List<ParticipantBo> acteurs;
+
 
     public FilmBo(int id, String title, int annee, int duree, String synopsis) {
         super();
@@ -76,5 +85,29 @@ public class FilmBo {
 
     public void setAvis(AvisBo avis) {
         this.avis = avis;
+    }
+
+    public GenreBo getGenre() {
+        return genre;
+    }
+
+    public void setGenre(GenreBo genre) {
+        this.genre = genre;
+    }
+
+    public ParticipantBo getParticipant() {
+        return participant;
+    }
+
+    public void setParticipant(ParticipantBo participant) {
+        this.participant = participant;
+    }
+
+    public List<ParticipantBo> getActeurs() {
+        return acteurs;
+    }
+
+    public void setActeurs(List<ParticipantBo> acteurs) {
+        this.acteurs = acteurs;
     }
 }
