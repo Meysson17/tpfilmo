@@ -13,6 +13,11 @@ public class AvisServiceImpl implements AvisService {
     private List<AvisBo> listeAvis;
 
     @Override
+    public AvisBo avis(int avis) throws ErreurAvis {
+        return null;
+    }
+
+    @Override
     public List<AvisBo> getListeAvis() {
         return listeAvis;
     }
