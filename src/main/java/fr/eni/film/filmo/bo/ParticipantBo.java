@@ -14,6 +14,9 @@ public class ParticipantBo {
         this.prenom = prenom;
     }
 
+    public ParticipantBo(){
+
+    }
     public int getId() {
         return id;
     }

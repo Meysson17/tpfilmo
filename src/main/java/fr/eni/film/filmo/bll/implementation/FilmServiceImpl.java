@@ -84,7 +84,7 @@ public class FilmServiceImpl implements FilmService{
     }
 
     @Override
-    public List<ParticipantBo> getParticipants() {
+    public List<ParticipantBo> getParticipant() {
         if(participants==null) {
             participants = new ArrayList<ParticipantBo>();
             participants.add(archainbaud);
@@ -99,6 +99,15 @@ public class FilmServiceImpl implements FilmService{
         return participants;
     }
 
+    @Override
+    public GenreBo getGenreById(int genreId) {
+        for(GenreBo g: genres) {
+            if(genreId==g.getId()) {
+                return g;
+            }
+        }
+        return null;
+    }
     @Override
     public ParticipantBo getParticipantById(int realisateurId) {
         for(ParticipantBo p: participants) {

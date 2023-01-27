@@ -12,8 +12,7 @@ public interface FilmService {
 
 
 
-    public List<FilmBo> getListeFilms();
-    public Map<Integer, FilmBo> getMapFilms();
+    List<FilmBo> getListeFilms();
 
     FilmBo getFilmById(int id);
     List<GenreBo> getGenres();
@@ -26,5 +25,4 @@ public interface FilmService {
 
     void ajouterFilm(FilmBo film);
 
-    List<ParticipantBo> getParticipants();
 }

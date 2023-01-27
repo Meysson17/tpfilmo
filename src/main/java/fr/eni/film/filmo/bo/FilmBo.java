@@ -42,6 +42,9 @@ public class FilmBo {
         this.avis = new ArrayList<AvisBo>();
         this.synopsis = synopsis;
     }
+    public void addActeur(ParticipantBo acteur) {
+        this.acteurs.add(acteur);
+    }
 
     public int getId() {
         return id;
