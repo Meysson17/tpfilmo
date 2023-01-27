@@ -3,7 +3,6 @@ package fr.eni.film.filmo.bo;
 public class MembreBo {
 
     private int id;
-
     private String nom;
     private String prenom;
     private String login;

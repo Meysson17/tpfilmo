@@ -1,11 +1,23 @@
 package fr.eni.film.filmo.bo;
 
+
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
 
+@Entity
+@Table(name = "FILMS")
 public class FilmBo {
-
+    @Id
+    @GeneratedValue
     private int id;
+    @Column(length = 50, nullable = false)
     private String title;
     private int annee;
     private int duree;
