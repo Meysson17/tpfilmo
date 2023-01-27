@@ -21,6 +21,10 @@ public class MembreBo {
         this.isAdmin = isAdmin;
     }
 
+
+    public MembreBo(){
+
+    }
     public int getId() {
         return id;
     }

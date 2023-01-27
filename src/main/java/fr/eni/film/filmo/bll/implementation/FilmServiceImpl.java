@@ -3,16 +3,13 @@ package fr.eni.film.filmo.bll.implementation;
 
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import fr.eni.film.filmo.bo.GenreBo;
 import fr.eni.film.filmo.bo.ParticipantBo;
 import org.springframework.stereotype.Service;
 
 import fr.eni.film.filmo.bll.FilmService;
-import fr.eni.film.filmo.bll.Erreur.ErreurFilm;
 import fr.eni.film.filmo.bo.FilmBo;
 
 @Service
@@ -36,6 +33,8 @@ public class FilmServiceImpl implements FilmService{
 
     GenreBo comedie = new GenreBo(0, "comedie");
     GenreBo scienceFiction = new GenreBo(1, "science fiction");
+
+    int compteurFilm = 2;
 
     @Override
     public List<FilmBo> getListeFilms() {
@@ -61,18 +60,68 @@ public class FilmServiceImpl implements FilmService{
         return films;
     }
 
-    public FilmBo film(int choix) throws ErreurFilm {
+    @Override
+    public FilmBo getFilmById(int id) {
+
+        for(FilmBo f: films) {
+            if(f.getId()==id) {
+                return f;
+            }
+        }
+
         return null;
     }
 
-    public List<FilmBo> getListeFilms() {
-        return listeFilms;
+    @Override
+    public List<GenreBo> getGenres() {
+        if(genres==null) {
+            genres = new ArrayList<GenreBo>();
+            genres.add(comedie);
+            genres.add(scienceFiction);
+
+        }
+        return genres;
     }
 
-    public Map<Integer, FilmBo> getMapFilms() {
-            return mapFilms;
+    @Override
+    public List<ParticipantBo> getParticipant() {
+        if(participants==null) {
+            participants = new ArrayList<ParticipantBo>();
+            participants.add(archainbaud);
+            participants.add(spielberg);
+            participants.add(patWelsh);
+            participants.add(henryThomas);
+            participants.add(marylin);
+            participants.add(tony);
+            participants.add(jack);
+            participants.add(shirley);
+        }
+        return participants;
     }
 
-    private Map<Integer, FilmBo> mapFilms;
+    @Override
+    public GenreBo getGenreById(int genreId) {
+        for(GenreBo g: genres) {
+            if(genreId==g.getId()) {
+                return g;
+            }
+        }
+        return null;
+    }
+    @Override
+    public ParticipantBo getParticipantById(int realisateurId) {
+        for(ParticipantBo p: participants) {
+            if(realisateurId==p.getId()) {
+                return p;
+            }
+        }
+        return null;
+    }
 
+    @Override
+    public void ajouterFilm(FilmBo film) {
+        film.setId(compteurFilm++);
+        films.add(film);
+
+    }
 }

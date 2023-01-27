@@ -45,6 +45,9 @@ public class FilmBo {
         this.avis = new ArrayList<AvisBo>();
         this.synopsis = synopsis;
     }
+    public void addActeur(ParticipantBo acteur) {
+        this.acteurs.add(acteur);
+    }
 
     public int getId() {
         return id;
@@ -122,6 +125,7 @@ public class FilmBo {
         this.acteurs = acteurs;
     }
 
+
     public List<AvisBo> getAvis() {
         return avis;
     }
@@ -137,4 +141,6 @@ public class FilmBo {
     public void setRealisateur(ParticipantBo realisateur) {
         this.realisateur = realisateur;
     }
+
+
 }
