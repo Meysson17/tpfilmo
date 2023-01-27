@@ -10,7 +10,14 @@
 </head>
 <body>
 	<h1>ajouter un film</h1>
-	<form action="#" th:action="@{/register}" method="post" th:object="${film}">
+	<form action="#" th:action="@{/new/film}" method="post" th:object="${film}">
+	
+		<input type="text" th:field="*{title}" />
+		<input type="number" th:field="*{annee}" />
+		<input type="number" th:field="*{duree}" />
+		<input type="text" th:field="*{synopsis}" />
+		
+		<button type="submit" class="btn btn-light">Light</button>
 	
 	</form>
 
