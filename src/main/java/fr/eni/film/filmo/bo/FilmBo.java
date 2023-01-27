@@ -28,6 +28,9 @@ public class FilmBo {
         this.duree = duree;
         this.synopsis=synopsis;
     }
+    
+    public FilmBo() {
+    }
 
     public FilmBo(Integer id, String title, int annee, ParticipantBo realisateur,
                 int duree, GenreBo genre, String synopsis) {

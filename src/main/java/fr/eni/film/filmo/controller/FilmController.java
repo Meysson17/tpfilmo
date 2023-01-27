@@ -44,5 +44,12 @@ public class FilmController {
 		
 		return new RedirectView("/film/");
 	}
+	
+	@GetMapping("/new/film")
+	public String newFilmForm(Model model) {
+		FilmBo film = new FilmBo();
+		model.addAttribute("film", film);
+		return "NewFilm";
+	}
 
 }
