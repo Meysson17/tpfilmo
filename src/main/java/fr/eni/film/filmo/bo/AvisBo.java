@@ -7,6 +7,9 @@ public class AvisBo {
 
     private String commentaire;
 
+    public AvisBo(){
+
+    }
     public AvisBo(int id, int note, String commentaire) {
         super();
         this.id = id;

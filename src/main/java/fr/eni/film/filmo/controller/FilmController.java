@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import fr.eni.film.filmo.bll.FilmService;
 import fr.eni.film.filmo.bo.FilmBo;
@@ -28,13 +30,26 @@ public class FilmController {
 
 	@GetMapping("/")
 	public String accueil(Model model) {
-		model.addAttribute("films", filmService.getListeFilms());
+		model.addAttribute("films", this.filmService.getListeFilms());
 		return "home";
 	}
 
 	@GetMapping("/film/{filmtitle}")
-	public String film(@PathVariable String title) {
-		return "film";
+	public String film(@PathVariable  String filmtitle) {
+		return "Films";
+	}
+	
+	@PostMapping("/new/film")
+	public RedirectView newFilm() {
+		
+		return new RedirectView("/film/");
+	}
+	
+	@GetMapping("/new/film")
+	public String newFilmForm(Model model) {
+		FilmBo film = new FilmBo();
+		model.addAttribute("film", film);
+		return "NewFilm";
 	}
 
 }
